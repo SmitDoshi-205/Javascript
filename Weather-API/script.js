@@ -1,4 +1,3 @@
-const API_key = "c5eaf53c8271fc5a070c17af2161b8da";
 const base_url = "https://api.openweathermap.org/data/2.5/weather";
 
 let result = document.querySelector("#result");
@@ -50,7 +49,7 @@ async function getWeather() {
 
   result.innerHTML = "Loading weather...";
   try {
-    const url = `${base_url}?q=${selectedCity}&appid=${API_key}&units=metric`;
+    const url = `${base_url}?q=${selectedCity}&appid=${API_Key}&units=metric`;
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error("City weather data not found");
